@@ -15,12 +15,7 @@ const App = () => {
   // const [user, setUser] = useState({name: "Marco"})
 
   const onCollapse = collapsed => {
-    console.log(collapsed);
-    if (collapsed) {
-      setCollapsed(false);
-    } else if (!collapsed) {
-      setCollapsed(true)
-    }
+      setCollapsed(!collapsed);
   };
 
   return (
