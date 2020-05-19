@@ -3,7 +3,7 @@ import { Layout, Menu } from 'antd';
 import {
   PieChartOutlined,
   TeamOutlined,
-  UserOutlined,
+  DollarOutlined,
 } from '@ant-design/icons';
 import './App.less';
 
@@ -32,11 +32,11 @@ const App = () => {
             <Menu.Item key="1" icon={<PieChartOutlined />}>
               Explore Career Options
             </Menu.Item>
-            <SubMenu key="sub1" icon={<UserOutlined />} title="Educational Programs">
+            <SubMenu key="sub1" icon={<TeamOutlined />} title="Educational Programs">
               <Menu.Item key="2">Explore Educational Programs</Menu.Item>
               <Menu.Item key="3">Apply To Programs</Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" icon={<TeamOutlined />} title="Financial Aid">
+            <SubMenu key="sub2" icon={<DollarOutlined />} title="Financial Aid">
               <Menu.Item key="4">Learn About Financial Aid</Menu.Item>
               <Menu.Item key="5">Apply for Financial Aid</Menu.Item>
             </SubMenu>
