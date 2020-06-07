@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Button } from 'antd';
 import {
   PieChartOutlined,
   TeamOutlined,
@@ -11,7 +11,10 @@ const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
+  const [presurveyComplete, setPresurveyComplete] = useState(false);
+  const loginBtnText = isLoggedIn ? "LOGOUT" : "LOGIN";
   // const [user, setUser] = useState({name: "Marco"})
 
   const onCollapse = collapsed => {
@@ -38,10 +41,12 @@ const App = () => {
           </Menu>
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }} />
+          <Header className="site-layout-background header" style={{ padding: 0 }}>
+            <Button id="login-btn">{loginBtnText}</Button>
+          </Header>
           <Content style={{ margin: '0 16px' }}>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-              Bill is a cat.
+              Let's get you on the road to a successful career!
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>©2020 Juntos2College</Footer>
